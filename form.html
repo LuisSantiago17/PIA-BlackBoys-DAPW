@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <title>Formulario de Información Personal</title>
+<body style="text-align: center; color: white; background-color: black; margin: 300px;">
+    <h2>Formulario de Información Personal</h2>
+    <form id="infoForm">
+      <label for="name">Nombre:</label><br>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="address">Dirección:</label><br>
+      <input type="text" id="address" name="address"><br>
+
+      <label for="email">Correo Electrónico:</label><br>
+      <input type="email" id="email" name="email"><br>
+
+      <label for="cardNumber">Número de Tarjeta:</label><br>
+      <input type="text" id="cardNumber" name="cardNumber"><br>
+
+      <input type="button" value="Enviar" onclick="submitForm()" style="margin: 20px;" onclick="form.return()">
+    </form>
+
+    <script type="text/javascript">
+      function submitForm() {
+        var name = document.getElementById('name').value;
+        var address = document.getElementById('address').value;
+        var email = document.getElementById('email').value;
+        var cardNumber = document.getElementById('cardNumber').value;
+
+        alert("DATOS ENVIADOS");
+        infoForm.reset();
+      }
+    </script>
+</body>
+</html>
